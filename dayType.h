@@ -29,9 +29,6 @@ public:
 	//Calculate and return the day by adding certain days to the current day
 	string addDays(int daysToAdd);
 
-	//function to convert enum to string
-	//string getDayString(int day);
-
 private:
 
 	int currentDay;
