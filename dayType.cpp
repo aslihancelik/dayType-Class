@@ -4,7 +4,7 @@
 using namespace std;
 
 //Initialize the static array daysOfWeek
-const string dayType::daysOfWeek[7] = { "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
+const string dayType::daysOfWeek[7] = { "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" };
 
 //constructor
 dayType::dayType(int day) {
