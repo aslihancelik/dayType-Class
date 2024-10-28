@@ -3,10 +3,6 @@
 #include <string>
 using namespace std;
 
-//enumeration for days of the week
-
-//{"Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"};
-
 class dayType
 {
 public:
