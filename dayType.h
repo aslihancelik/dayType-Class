@@ -4,40 +4,42 @@
 using namespace std;
 
 //enumeration for days of the week
-enum WeekDays { Mon, Tue, Wed, Thu, Fri, Sat, Sun };
+
+//{"Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"};
 
 class dayType
 {
 public:
 	
 	//constructor
-	dayType(WeekDays = Mon);
+	dayType(int = 0);
 	//Setter
 
-	//Set the day
-	void setDay(WeekDays day);
+	//Set the day by index
+	void setDay(int day);
 	
 	//Get the day
-	WeekDays getDay();
+	string getDay();
 
 	//Print the day
 	void print();
 
 	//get the next day
-	WeekDays getNextDay();
+	string nextDay();
 
 	//get the previous day
-	WeekDays getPreviousDay();
+	string previousDay();
 
 	//Calculate and return the day by adding certain days to the current day
-	WeekDays findDay(int daysToBeAdded);
+	string addDays(int daysToAdd);
 
 	//function to convert enum to string
-	string getDayString(WeekDays day);
+	//string getDayString(int day);
 
 private:
 
-	WeekDays currentDay;
+	int currentDay;
+	static const string daysOfWeek[7];
 
 };
 
