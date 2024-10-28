@@ -14,7 +14,12 @@ dayType::dayType(int day) {
 
 //Set the day
 void dayType::setDay(int day) {
-	currentDay = day % 7 ;
+	if (day > 0) {
+		currentDay = day % 7;
+	}
+	else {
+		cout << "You can't set the day to a negative value" << endl;
+	}
 }
 
 //Get the day
@@ -41,5 +46,12 @@ string dayType::previousDay() {
 
 //Calculate and return the day by adding certain days to the current day
 string dayType::addDays(int daysToAdd) {
-	return daysOfWeek[(currentDay + daysToAdd) % 7];
+	if (daysToAdd >= 0) {
+		return daysOfWeek[(currentDay + daysToAdd) % 7];
+	}
+	else {
+		cout << "You can't add a negative value." << endl;
+		return;
+	}
+	
 }

@@ -19,6 +19,16 @@ int main()
     cout << "Next day is: ";
     cout << day.nextDay() << endl; 
 
+    //set the day to monday
+    cout << "Setting day to monday: ";
+    day.setDay(1);
+    day.print();
+
+    // Calculate and print the day after adding certain days
+    int daysToAdd = 4;
+    cout << "The day after adding " << daysToAdd << " days is: ";
+    cout << day.addDays(daysToAdd) << endl;
+
     //parameterized constructor
     dayType day2(3);
     cout << "The parameterized construcor with Wed initialized the day to: ";
@@ -38,8 +48,8 @@ int main()
     day2.print();
 
     // Calculate and print the day after adding certain days
-    int daysToAdd = 4;
-    cout << "The day after adding " << daysToAdd << " days is: ";
+    daysToAdd = 4;
+    cout << "The day after adding " << daysToAdd << " days to day2 is: ";
     cout << day2.addDays(daysToAdd) << endl;
 
     // Get and print the next day
@@ -54,6 +64,17 @@ int main()
     // Get and print the next day
     cout << "Get the day2: ";
     cout << day2.getDay() << endl;
+
+    //set the day to sunday
+    cout << "Setting day2 to tuesday: ";
+    day2.setDay(2);
+    day2.print();
+
+    // Calculate and print the day after adding certain days
+    daysToAdd = 13;
+    cout << "The day after adding " << daysToAdd << " days to day2 is: ";
+    cout << day2.addDays(daysToAdd) << endl;
+
     
 }
 
