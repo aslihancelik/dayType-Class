@@ -3,30 +3,41 @@
 #include <string>
 using namespace std;
 
+//enumeration for days of the week
+enum WeekDays { Mon, Tue, Wed, Thu, Fri, Sat, Sun };
+
 class dayType
 {
-private:
-
 public:
-
+	
 	//constructor
-	dayType();
+	dayType(WeekDays = Mon);
 	//Setter
 
 	//Set the day
-	void setDay();
+	void setDay(WeekDays day);
 	
 	//Get the day
-	string getDay(int dayNum);
+	WeekDays getDay();
 
 	//Print the day
 	void print();
 
 	//get the next day
-	
-	string getNextDay(int dayNum);
+	WeekDays getNextDay();
+
+	//get the previous day
+	WeekDays getPreviousDay();
 
 	//Calculate and return the day by adding certain days to the current day
-	string findDay(int dayNum, int daysToBeAdded);
+	WeekDays findDay(int daysToBeAdded);
+
+	//function to convert enum to string
+	string getDayString(WeekDays day);
+
+private:
+
+	WeekDays currentDay;
+
 };
 
